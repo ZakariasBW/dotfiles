@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line q
 call vundle#end()      " required
@@ -16,7 +17,6 @@ filetype off
 " Put your non-Plugin stuff after this line
 set relativenumber
 syntax on
-
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -24,8 +24,9 @@ set tabstop=4
 set shiftwidth=4
 " " On pressing tab, insert 4 spaces
 set expandtab
-
+set smartindent
 set encoding=utf-8
+set backspace=indent,eol,start
 colorscheme monokai
 "let g:rehash256 = 1
 set t_Co=256
