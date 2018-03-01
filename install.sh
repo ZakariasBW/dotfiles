@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Install packages
-#sudo apt-get update
+sudo apt-get update
 sudo apt-get install git -y
 sudo apt-get install vim -y
 
@@ -14,8 +14,9 @@ dotfiles config --local status.showUntrackedFiles no
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 rm -r $HOME/dotfiles
 
-# Import all dotfiles
-dotfiles checkout .
+# Import dotfiles
+dotfiles checkout .tmux*
+dotfiles checkout .vim*
 
 # Setup vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
