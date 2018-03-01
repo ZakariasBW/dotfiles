@@ -14,7 +14,7 @@ dotfiles config --local status.showUntrackedFiles no
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 rm -r $HOME/dotfiles
 
-# Inport all dotfiles
+# Import all dotfiles
 dotfiles checkout .
 
 # Setup vim

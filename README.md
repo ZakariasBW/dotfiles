@@ -7,7 +7,8 @@
 ```
 --->
 
-###Setup new machine
+### Setup new machine
+
 **Mac OSx:**
 
 ```
