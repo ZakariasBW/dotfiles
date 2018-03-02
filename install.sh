@@ -13,15 +13,17 @@ shopt -s expand_aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 dotfiles config --local status.showUntrackedFiles no
-rm -r $HOME/dotfiles
 
 # Import dotfiles
 dotfiles checkout .
-rm README.md install.sh
 
 # Setup vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+# Clean up
+rm -r dotfiles
+rm README.md install.sh
 
 echo 'Complete, restart shell in order to get dotfiles working: "$ exec bash" '
 
