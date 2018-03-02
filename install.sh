@@ -17,6 +17,7 @@ rm -r $HOME/dotfiles
 
 # Import dotfiles
 dotfiles checkout .
+rm README.md install.sh
 
 # Setup vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
