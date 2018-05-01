@@ -4,6 +4,7 @@
 sudo apt-get update
 sudo apt-get install git -y
 sudo apt-get install vim -y
+sudo apt-get install tmux -y
 
 
 # Setup dotfiles
@@ -24,6 +25,7 @@ vim +PluginInstall +qall
 # Clean up
 rm -r dotfiles
 rm README.md install.sh
+rm wget-log
 
 echo 'Complete, restart shell in order to get dotfiles working: "$ exec bash" '
 

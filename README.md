@@ -12,10 +12,10 @@
 **Mac OSx:**
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/ZakariasBW/dotfiles/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ZakariasBW/dotfiles/macOS/install.sh)
 ```
 
-**Ubuntu Server:**
+**Ubuntu:**
 
 ```
 bash <(wget -qO- https://raw.githubusercontent.com/ZakariasBW/dotfiles/master/install.sh)
