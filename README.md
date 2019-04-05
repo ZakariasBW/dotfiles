@@ -10,7 +10,7 @@
 ### Setup new machine
 
 **Mac OSx:**
-
+wip install script not done
 ```
 bash <(curl -s https://raw.githubusercontent.com/ZakariasBW/dotfiles/macOS/install.sh)
 ```
