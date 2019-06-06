@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Install packages
-sudo apt-get update
-sudo apt-get install git -y
-sudo apt-get install vim -y
+brew install vim
 
 
 # Setup dotfiles
@@ -11,10 +9,11 @@ cd $HOME
 git clone --separate-git-dir=$HOME/.dotfiles https://github.com/ZakariasBW/dotfiles.git
 shopt -s expand_aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bash_profile
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 dotfiles config --local status.showUntrackedFiles no
 
 # Import dotfiles
+dotfiles checkout macOS
 dotfiles checkout .
 
 # Setup vim
