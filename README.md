@@ -17,6 +17,8 @@ bash <(curl -s https://raw.githubusercontent.com/ZakariasBW/dotfiles/macOS/insta
 
 **Ubuntu:**
 
+TODO: remove atom
+
 ```
 bash <(wget -qO- https://raw.githubusercontent.com/ZakariasBW/dotfiles/master/install.sh)
 ```
