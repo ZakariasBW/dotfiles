@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Install packages
-brew install vim
 brew install bash-completion
+brew install vim
+brew install nvm
 
 
 # Setup dotfiles
@@ -13,10 +14,18 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bash_profile
 dotfiles config --local status.showUntrackedFiles no
 
-# Setup bash completion
-echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> $HOME/.bash_profile
-echo 'GIT_PS1_SHOWDIRTYSTATE=true' >> $HOME/.bash_profile
-echo "export PS1='[\u@mbp \w$(__git_ps1)]\$ '" >> $HOME/.bash_profile
+# Setup bash completion and fix terminal folder style
+echo '
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1="[\u@mbp \w$(__git_ps1)]\$ "
+' >> $HOME/.bash_profile
+
+# Setup nvm completion
+echo '
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+' >> $HOME/.bash_profile
 
 # Setup git excludes
 echo '.DS_Store' >> $HOME/.gitexcludes
