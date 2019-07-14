@@ -4,6 +4,7 @@
 brew install bash-completion
 brew install vim
 brew install nvm
+brew install tmux
 
 
 # Setup dotfiles
